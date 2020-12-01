@@ -1,0 +1,67 @@
+<div class="container card" fxLayoutAlign="center" >
+<div fxFlex="50%" fxLayoutAlign="center">
+    
+<mat-card>     
+    <mat-card-header>
+    <mat-card-title>Change Password</mat-card-title>
+    </mat-card-header>
+   
+      <mat-card-content>
+        <form [formGroup]="changepwd" (ngSubmit)="onSubmit()">
+        <mat-form-field >
+            <mat-label>Current Password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" formControlName="currentpassword">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error>  
+                <span   *ngIf="currentpassword.invalid && currentpassword.touched">
+                  <span  *ngIf="changepwd.hasError('required','currentpassword')">password <strong>required</strong></span>
+                   <span  *ngIf="changepwd.hasError('minlength','currentpassword')">Minimum Length is 6</span>
+                   <span  *ngIf="changepwd.hasError('maxlength','currentpassword')">maximum Length is 12</span>
+                 </span>
+              </mat-error>
+            </mat-form-field><br/>
+        <mat-form-field >
+          <mat-label>New Password</mat-label>
+            <input matInput [type]="hide1 ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error>  
+                <span   *ngIf="password.invalid && password.touched">
+                  <span  *ngIf="changepwd.hasError('required','password')">password <strong>required</strong></span>
+                   <span  *ngIf="changepwd.hasError('minlength','password')">Minimum Length is 6</span>
+                   <span  *ngIf="changepwd.hasError('maxlength','password')">maximum Length is 12</span>
+                 </span>
+              </mat-error>
+          </mat-form-field><br/>
+          <mat-form-field >
+            <mat-label>Confirm Password</mat-label>
+            <input matInput [type]="hide2 ? 'password' : 'text'" formControlName="cpassword">
+            <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error>  
+                <span   *ngIf="cpassword.invalid && cpassword.touched">
+                  
+                  <span  *ngIf="changepwd.hasError('required','cpassword')">password <strong>required</strong></span>
+                  <span  *ngIf="changepwd.hasError('minlength','cpassword')">Minimum Length is 6</span>
+                  <span  *ngIf="changepwd.hasError('maxlength','cpassword')">maximum Length is 12</span>
+                
+                 </span>
+              </mat-error>
+              <mat-error>  
+                  <span   *ngIf="cpassword.invalid && cpassword.touched">
+                    <span   *ngIf="changepwd.value.password !== changepwd.value.cpassword">Password doesn't match</span>
+                   </span>
+                </mat-error>
+          </mat-form-field><br/>
+          <button mat-raised-button color="primary" [ngStyle]="{'margin':'20px'}">Change Password</button>
+        </form>
+    </mat-card-content>
+    
+  
+  </mat-card> 
+</div>
+</div>

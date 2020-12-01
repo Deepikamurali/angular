@@ -1,0 +1,23 @@
+mat-card-header
+{
+    background-color: blue;
+    padding-top: 0.5em;
+   
+}
+mat-card
+{
+    width:230px;height: 360px;
+}
+mat-card-actions,.vertical-center {
+ margin-left:65px;
+     
+    
+     /* -ms-transform: translateY(-50%);
+     transform: translateY(-50%); */
+   }
+
+   .mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab,.mat-card-title
+   {
+    color: rgb(255 255 255);
+    background-color: #00f;
+   }
