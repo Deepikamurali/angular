@@ -1,0 +1,15 @@
+
+<div class="container card" fxLayoutAlign="center" >
+    <div fxFlex="50%">
+    <h1 fxLayoutAlign="center">Please Enter The OTP To Verify Your Account</h1> 
+    <h3 fxLayoutAlign="center">A OTP has been send to your register number</h3>
+<ng-otp-input fxLayoutAlign="center" #ngOtpInput (onInputChange)="onOtpChange($event)"   [config]="{length:4,allowNumbersOnly: true, isPasswordInput: true,placeholder: '-'}"></ng-otp-input><br>
+<span fxLayoutAlign="center" ><button mat-raised-button color="warn" (click)="validateotp()" [ngStyle]="{'margin':'10px'}">Validate OTP</button> 
+    <button mat-raised-button color="accent" [ngStyle]="{'margin':'10px'}" (click)="resendotp()">Resend OTP</button>
+</span>
+
+</div>
+</div>
+
+  
+

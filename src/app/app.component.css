@@ -1,0 +1,54 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+  }
+ 
+
+   
+
+ 
+  /* .mat-card {background: rgba(0,0,0,0.5);} */
+  /* .main-div{
+    /* height: 50vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+  } */ 
+  mat-toolbar
+  {
+      width:100%;
+      padding:0;
+  }
+  #sec
+  {
+   margin-top:0px;
+  }
+ 
+  /* mat-card-header
+  {
+      background-color: blue;
+      padding-top: 0.5em;
+     
+  }
+  mat-card
+  {
+      width:230px;height: 360px;
+  }
+  mat-card-actions,.vertical-center {
+   margin-left:65px;
+       
+      
+       /* -ms-transform: translateY(-50%);
+       transform: translateY(-50%); */
+     /* }
+  
+     .mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab,.mat-card-title
+     {
+      color: rgb(255 255 255);
+      background-color: #00f; 
+     } */
+
+
+
+
+
+     

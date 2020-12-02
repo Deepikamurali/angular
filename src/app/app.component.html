@@ -1,0 +1,29 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button> -->
+    <h1>Taxpare</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button routerLink="resetpwd"> Reset Password </a>
+      <a mat-button routerLink="forgotpwd"> Forgot Password </a>
+      <a mat-button routerLink="changepwd"> Change Password </a>
+      <a mat-button routerLink="dashboard"> dashboard</a>
+     <!-- <a mat-button [routerLink]="'/activities'"> Activities </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+      <button mat-button (click)="openDialog()">Open dialog</button> -->
+      <a mat-button [ngStyle]="{'float':'right'}" routerLink="login"> Login </a>
+
+    </div>
+  </mat-toolbar-row>
+  
+    
+</mat-toolbar>
+
+<br/>
+
+
+  <router-outlet></router-outlet>
+ 
